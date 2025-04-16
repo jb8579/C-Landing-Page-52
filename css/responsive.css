@@ -1,0 +1,465 @@
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+    h2 {
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 55px; 
+    }
+    .useful-link ul {
+        gap: 30px;
+    }
+    .review-body p {
+        height: 105px;
+    }
+    .hero-alt {
+        min-height: 560px;
+        padding-top: 50px;
+    }
+    .hero-content-alt {
+        max-width: 90%;
+        padding: 0 15px;
+    }
+
+    .intro-content-alt {
+        flex-direction: column;
+    }
+    .intro-image img {
+        border-radius: 30px 30px 0 0;
+    }
+    .intro-text {
+        padding: 20px;
+    }
+    .intro-text h2 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+    .intro-text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .why-choose-grid {
+        flex-direction: column;
+    }
+    .feature-card {
+        flex-direction: row;
+    }
+
+    .lotto-info-card {
+        padding-bottom: 40px;
+    }
+
+    .cta-banner-alt-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .cta-image-col {
+        order: 0;
+        padding: 0;
+        flex-basis: 70%;
+        width: 100%;
+        margin-right: -40%;
+    }
+    .cta-text-col {
+        order: 2;
+        padding: 40px 20px;
+        width: 100%;
+        flex-basis: 100%;
+    }
+    .cta-jackpot-col {
+        order: 1;
+        padding: 20px;
+        flex-basis: 70%;
+    }
+    .cta-image-col img {
+        max-height: 186px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .reviews-grid-alt {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .lotto-info-card .info-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .lotto-numbers span {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .lotto-info-card .info-date,
+    .lotto-info-card .info-description {
+        font-size: 17px;
+        line-height: 28px;
+        padding: 15px 0px 25px 0px;
+        height: 95px;
+    }
+    .site-footer-alt {
+        padding: 40px 0px 0px 0px;
+    }
+    .why-choose-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .faq-section-alt .container {
+        padding: 20px;
+    }
+    .faq-item-alt summary {
+        font-size: 20px;
+    }
+    .faq-item-alt p {
+        font-size: 14px;
+    }
+
+    .responsible-gaming {
+        padding: 20px;
+    }
+    .responsible-gaming-text-box {
+        padding: 20px;
+    }
+
+    .footer-content-alt {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: calc(14px * 0.95);
+    }
+    .intro-content-alt {
+        display: flex;
+        flex-direction: column;
+    }
+    .why-choose-grid {
+        display: flex;
+        gap: 18px;
+        flex-direction: column;
+    }
+    .lotto-info-grid-alt {
+        display: flex;
+        gap: 18px;
+        flex-direction: column;
+    }
+    .reviews-grid-alt {
+        display: flex;
+        gap: 18px;
+        flex-direction: column;
+    }
+    .button {
+        padding: 0.9em 1.6em;
+        font-size: 15px;
+    }
+    .header-content {
+        flex-direction: row;
+        gap: 15px;
+        padding: 10px 15px;
+    }
+    .auth-buttons {
+        margin-top: 10px;
+    }
+    .auth-buttons .button {
+        padding: 0.8em 1em;
+        font-size: 0.9em;
+    }
+
+    .hero-alt {
+        min-height: auto;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .hero-content-alt {
+        gap: 20px;
+    }
+    .hero-content-alt p {
+        max-width: 379px;
+    }
+
+    .countdown-timer {
+        width: 100%;
+    }
+    .intro-text h2 {
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .intro-text p {
+        font-size: 15px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .section-title {
+        margin-bottom: 30px;
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .feature-text h5 {
+        font-size: 18px;
+    }
+    .why-choose-section {
+        padding: 60px 0px;
+    }
+    .lotto-info-card .info-title {
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .lotto-info-card {
+        padding: 30px 20px;
+    }
+    .lotto-info-card .info-date,
+    .lotto-info-card .info-description {
+        font-size: 15px;
+        line-height: 28px;
+        padding: 0px 0px 25px 0px;
+        height: auto;
+    }
+    .lotto-numbers span {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+    .countdown-timer {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .lotto-info-alt {
+        padding: 60px 0px;
+    }
+    .cta-jackpot-col h2 {
+        font-size: 60px;
+        padding: 40px 0px 0px 0px;
+    }
+    .cta-jackpot-col p {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    .join-title-h4 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    h5.join-title-h5 {
+        font-size: 19px;
+        line-height: 30px;
+    }
+    .reviews-section-alt {
+        padding: 60px 0px;
+    }
+    .review-rating h5 {
+        margin-bottom: 5px;
+        text-align: right;
+        margin-right: 5px;
+    }
+    .review-body p {
+        font-size: 15px;
+        line-height: 24px;
+        height: auto;
+    }
+    p.timer-title {
+        font-size: 19px;
+    }
+    section.intro-section.intro-alt {
+        padding: 60px 0px 0px 0px;
+    }
+    .timer-segments {
+        gap: 12px;
+    }
+    .timer-value {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .timer-label {
+        font-size: 0.8em;
+    }
+
+    .intro-image img {
+        height: 250px;
+    }
+
+    .feature-card {
+        flex-direction: row;
+        text-align: left;
+    }
+    .feature-icon-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .cta-banner-alt-content {
+        border-radius: 10px;
+    }
+
+    .review-card-alt {
+        padding: 30px 15px;
+    }
+    .faq-item-alt p {
+        font-size: 14px !important;
+        line-height: 24px;
+    }
+    .container {
+        padding: 0px 0px;
+    }
+    .faq-item-alt {
+        padding-bottom: 10px;
+    }
+    .review-card-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .review-rating {
+        text-align: center;
+    }
+
+    .faq-section-alt .container {
+        border-radius: 10px;
+    }
+    .faq-item-alt summary {
+        font-size: 1.1em;
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 25px; 
+    }
+    .faq-item-alt p {
+        font-size: 0.9em;
+        color: #bababa;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; 
+    }
+    .responsible-gaming-text-box {
+        border-radius: 10px;
+        padding: 30px 20px;
+    }
+    .responsible-gaming {
+        min-height: auto;
+        padding: 20px 10px;
+    }
+    .responsible-gaming-footer p:first-of-type {
+        font-size: 14px;
+        line-height: 26px;
+        padding: 0px 0px 20px 0px;
+    }
+    .useful-link ul {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .site-footer-alt {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .copyright p {
+        font-size: 13px;
+    }
+    .subpage-background {
+        padding: 60px 0px 40px 0px;
+    }
+    h2.subpage-title-h2 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .subpage-texts > h3 {
+        font-size: 22px;
+        line-height: 30px;
+        padding-bottom: 15px;
+        padding-top: 8px;
+    }
+    .subpage-texts > p {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 0px 0px 30px 0px;
+        text-align: left;
+    }
+    .subpage-texts > ul {
+        padding-left: 40px;
+    }
+    .subpage-texts > ul > li {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+        padding: 8px 0px;
+    }
+    p.timer-title {
+        font-size: 20px !important;
+    }
+    .cta-banner-alt {
+        padding: 0px 0px 60px 0px;
+    }
+    .faq-section-alt {
+        margin: 0px;
+    }
+    .site-footer-alt {
+        margin-top: 40px;
+    }
+    .footer-content-alt {
+        padding: 30px 15px;
+        gap: 30px;
+    }
+    .payment-methods figure img {
+        height: 40px;
+    }
+    .age-restriction-top-bar > p {
+        font-size: 10px;
+        gap: 0px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .age-restriction-top-bar > p > img {
+        width: 18px;
+        display: block;
+    }
+    .age-restriction-top-bar {
+        padding: 4px;
+    }
+    .hero-content-alt h1 {
+        font-size: 34px;
+        line-height: 50px;
+    }
+    .hero-content-alt p {
+        max-width: 100% !important;
+        font-size: 14px;
+        line-height: 23px;
+    }
+    .cta-banner-alt-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .cta-image-col {
+        order: 0;
+        padding: 0;
+        flex-basis: 70%;
+        width: 100%;
+        margin-right: -40%;
+    }
+    .cta-text-col {
+        order: 2;
+        padding: 40px 20px;
+        width: 100%;
+        flex-basis: 100%;
+    }
+    .cta-jackpot-col {
+        order: 1;
+        padding: 20px;
+        flex-basis: 70%;
+    }
+    .cta-image-col img {
+        max-height: 186px;
+        width: auto;
+        max-width: 100%;
+    }
+}

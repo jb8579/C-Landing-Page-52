@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login to Saturday Lotto Australia - Access Your Account</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <meta name="description" content="Login to your Saturday Lotto account, view the latest results, check winning numbers, and start playing today on infotrieval.com.">
+        <meta name="keywords" content="login Saturday Lotto, lotto account login, access lotto account, Saturday Lotto results, play lotto, lotto account">
+        <meta name="author" content="infotrieval.com">
+        <meta property="og:title" content="Login to Saturday Lotto Australia - Access Your Account">
+        <meta property="og:description" content="Log in to your Saturday Lotto account, stay updated with results, and play with confidence. Join the excitement on infotrieval.com.">
+        <meta property="og:url" content="https://infotrieval.com/login">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://infotrieval.com/images/saturday-background-ball-image.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Login to Saturday Lotto Australia - Access Your Account">
+        <meta name="twitter:description" content="Access your Saturday Lotto account to check results, winning numbers, and more. Log in to play today on infotrieval.com.">
+        <meta name="twitter:image" content="https://infotrieval.com/images/saturday-background-ball-image.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>    
+	<body>
+		<header class="site-header">
+			<div class="age-restriction-top-bar">
+				<p><img src="images/18+ icon  1.png" alt="18+ Icon">Only for users aged 18 and over. Play responsibly — Know your limits.</p>
+			</div>
+			<div class="container header-content">
+				<div class="logo">
+					<a href="index.html" rel="home">
+						<img width="93" height="60" src="images/saturday-lotto-logo.png" alt="Saturday Lotto - Australia’s Favourite Draw">
+					</a>
+				</div>
+				<nav class="auth-buttons">
+					<a href="login.html" class="button button-login">Sign In</a>
+					<a href="register.html" class="button button-register">Join Now</a>
+				</nav>
+			</div>
+		</header>	
+        <main>
+            <section class="form-bg">
+                <div class="form-container" id="loginForm">
+                    <h2 class="form-title">User Login</h2>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                    <div class="password-flex">
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <img src="images/visibility_off.png" alt="Toggle Password Visibility">
+                    </div>
+                    <button id="loginBtn">Sign In</button>
+                    <p class="forget-p"><a href="javascript:void(0);" onclick="showForgotPasswordForm()">Forgot your password?</a></p>
+                </div>
+                <div class="form-container hidden" id="forgotPasswordForm">
+                    <h2 class="form-title">Recover Password</h2>
+                    <input type="email" id="resetEmail" placeholder="Type your email to reset" required>
+                    <button id="resetBtn">Send Reset Link</button>
+                    <button id="backToLogin" onclick="showLoginForm()">Return to Login</button>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const loginForm = document.getElementById("loginForm");
+                        const forgotPasswordForm = document.getElementById("forgotPasswordForm");
+                        const emailInput = document.getElementById("email");
+                        const passwordInput = document.getElementById("password");
+                        const loginButton = document.getElementById("loginBtn");
+                        const resetEmailInput = document.getElementById("resetEmail");
+                        const resetButton = document.getElementById("resetBtn");
+    
+                        // Handle Login
+                        loginButton.addEventListener("click", function (event) {
+                            event.preventDefault();
+    
+                            const email = emailInput.value.trim();
+                            const password = passwordInput.value.trim();
+    
+                            if (!email || !password) {
+                                alert("Please enter both email and password.");
+                                return;
+                            }
+    
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailPattern.test(email)) {
+                                alert("Please enter a valid email address.");
+                                return;
+                            }
+    
+                            if (password.length < 6) {
+                                alert("Password must be at least 6 characters long.");
+                                return;
+                            }
+    
+                            alert("Login successful!");
+                            window.location.href = "index.html";
+                        });
+    
+                        // Show Forgot Password Form
+                        window.showForgotPasswordForm = function () {
+                            loginForm.classList.add("hidden");
+                            forgotPasswordForm.classList.remove("hidden");
+                        };
+    
+                        // Handle Password Reset
+                        resetButton.addEventListener("click", function (event) {
+                            event.preventDefault();
+    
+                            const resetEmail = resetEmailInput.value.trim();
+                            if (!resetEmail) {
+                                alert("Please enter your email.");
+                                return;
+                            }
+    
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailPattern.test(resetEmail)) {
+                                alert("Please enter a valid email address.");
+                                return;
+                            }
+    
+                            alert("A password reset link has been sent to your email.");
+                        });
+    
+                        // Back to Login
+                        window.showLoginForm = function () {
+                            forgotPasswordForm.classList.add("hidden");
+                            loginForm.classList.remove("hidden");
+                        };
+                    });
+                </script>
+            </section>
+        </main>
+        <footer class="site-footer site-footer-alt">
+			<div class="container footer-content footer-content-alt">
+				<div class="payment-methods">
+					<ul>
+						<li>
+							<a><img src="images/18plus-icon.png" alt="18+ Only"></a>
+						</li>
+						<li>
+							<a href="https://resetapp.com.au/" target="_blank" rel="noopener">
+								<img src="images/Reset-logo.png" alt="Reset Support App">
+							</a>
+						</li>
+						<li>
+							<a href="https://gamblershelp.com.au/" target="_blank" rel="noopener">
+								<img src="images/Gamblers-Help.png" alt="Gambler's Help">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.qld.gov.au/" target="_blank" rel="noopener">
+								<img src="images/qld-logo.png" alt="Queensland Government">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.vic.gov.au/" target="_blank" rel="noopener">
+								<img src="images/victoria.png" alt="Victoria Government">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="responsible-gaming-footer">
+					<p>
+						<strong>Play Responsibly.</strong> If gambling is affecting your life, seek help. Contact <a href="https://www.gambleaware.nsw.gov.au" target="_blank" rel="noopener">GambleAware</a> or call <a href="tel:1800858858">1800 858 858</a> for confidential support. <strong>Age Restriction:</strong> Participation is strictly limited to individuals aged 18 and over. Underage gambling is against the law and actively prevented on this platform.
+					</p>					
+				</div>
+				<div class="useful-link">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="termsandconditions.html">Terms & Conditions</a></li>
+						<li><a href="privacypolicy.html">Privacy Policy</a></li>
+						<li><a href="cookiepolicy.html">Cookie Policy</a></li>
+						<li><a href="mailto:support@infotrieval.com">Contact</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>©2025 infotrieval.com — All content and rights are exclusively owned and protected.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

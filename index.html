@@ -1,277 +1,394 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>AU Site 2 - Refactored</title>
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<!-- Link to the external CSS file -->
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="site-header">
-	<div class="container header-content">
-		<div class="logo">
-			<a href="index.html" rel="home">
-				<img width="93" height="60" src="./AU Site 1_files/image-19.png" alt="AU Site 2 Logo">
-			</a>
-		</div>
-		<nav class="auth-buttons"> <!-- Changed div to nav for semantics -->
-			<a href="#" class="button button-login">Log In</a>
-			<a href="#" class="button button-register">Register</a>
-		</nav>
-	</div>
-</header>
-
-<main class="site-content">
-
-	<section class="hero hero-alt">
-		<div class="hero-background">
-			<img src="./AU Site 1_files/image-21.png" alt="Hero background image"> <!-- Background image -->
-			<div class="hero-overlay"></div> <!-- Gradient overlay -->
-		</div>
-		<div class="container hero-content hero-content-alt">
-			<h1>Your <strong>Winning</strong> Journey<br>Starts Here!</h1>
-			<p>Join Saturday Lotto and experience the excitement of Australia’s most trusted lottery platform. Check results, buy tickets and never miss a draw!</p> <!-- Corrected typo -->
-
-			<div class="countdown-timer">
-				<p class="timer-title">time until next draw</p>
-				<div class="timer-segments">
-					<div class="timer-segment">
-						<span class="timer-value">05</span>
-						<span class="timer-label">days</span>
-					</div>
-					<div class="timer-segment">
-						<span class="timer-value">01</span>
-						<span class="timer-label">hours</span>
-					</div>
-					<div class="timer-segment">
-						<span class="timer-value">49</span>
-						<span class="timer-label">minutes</span>
-					</div>
-					<div class="timer-segment">
-						<span class="timer-value">18</span>
-						<span class="timer-label">seconds</span>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Saturday Lotto Australia - Latest Results, Winning Numbers & Tips</title>
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+		<meta name="description" content="Stay up-to-date with the latest Saturday Lotto results, winning numbers, and expert tips. Play smart and check your chances with infotrieval.com.">
+		<meta name="keywords" content="Saturday Lotto, Lotto Australia, Lotto results, AU lottery, winning numbers, lotto tips, infotrieval, Australian lotto, buy lotto ticket, lotto draw">
+		<meta name="author" content="infotrieval.com">
+		<meta property="og:title" content="Saturday Lotto Australia - Latest Results & Tips">
+		<meta property="og:description" content="Get the latest Saturday Lotto results, expert number analysis, and play strategies on infotrieval.com.">
+		<meta property="og:url" content="https://infotrieval.com">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://infotrieval.com/images/saturday-background-ball-image.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Saturday Lotto Australia - Latest Results & Tips">
+		<meta name="twitter:description" content="Get the latest Saturday Lotto results, expert number analysis, and play strategies on infotrieval.com.">
+		<meta name="twitter:image" content="https://infotrieval.com/images/saturday-background-ball-image.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="age-restriction-top-bar">
+				<p><img src="images/18+ icon  1.png" alt="18+ Icon">Only for users aged 18 and over. Play responsibly — Know your limits.</p>
+			</div>
+			<div class="container header-content">
+				<div class="logo">
+					<a href="index.html" rel="home">
+						<img width="93" height="60" src="images/saturday-lotto-logo.png" alt="Saturday Lotto - Australia’s Favourite Draw">
+					</a>
+				</div>
+				<nav class="auth-buttons">
+					<a href="login.html" class="button button-login">Sign In</a>
+					<a href="register.html" class="button button-register">Join Now</a>
+				</nav>
+			</div>
+		</header>		
+		<main class="site-content">
+			<section class="hero hero-alt">
+				<div class="hero-background">
+					<img src="images/saturday-background-ball-image.png" alt="Saturday Lotto balls and background image"> 
+					<div class="hero-overlay"></div> 
+				</div>
+				<div class="container hero-content hero-content-alt">
+					<h1>Kick Off Your <span>Lucky Streak</span><br>with Saturday Lotto!</h1>
+					<p>Step into the thrill of Australia’s favourite weekend lottery. Check winning numbers, grab your tickets, and stay ahead of every draw — all in one place.</p>
+			
+					<div class="countdown-timer">
+						<p class="timer-title">Next Jackpot Countdown</p>
+						<div class="timer-segments">
+							<div class="timer-segment">
+								<span class="timer-value" id="days">05</span>
+								<span class="timer-label">Days</span>
+							</div>
+							<div class="timer-segment">
+								<span class="timer-value" id="hours">01</span>
+								<span class="timer-label">Hours</span>
+							</div>
+							<div class="timer-segment">
+								<span class="timer-value" id="minutes">49</span>
+								<span class="timer-label">Minutes</span>
+							</div>
+							<div class="timer-segment">
+								<span class="timer-value" id="seconds">18</span>
+								<span class="timer-label">Seconds</span>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="intro-section intro-alt">
-		<div class="container intro-content-alt">
-			<div class="intro-image">
-				<figure>
-					<img width="1165" height="776" src="./AU Site 1_files/image-22.png" alt="People celebrating a win">
-				</figure>
-			</div>
-			<div class="intro-text">
-				<h2>Play Saturday Lotto – Australia’s Favorite Weekend Jackpot!</h2>
-				<p>Dreaming of hitting the big time? Oz Lotto is your chance to win massive jackpots and change your life in an instant! Since 1994, this legendary lottery has been delivering thrilling wins, including an astonishing $100 million jackpot in 2013. With just 7 winning numbers, you could become Australia’s next big winner! Plus, with multiple prize divisions, there are plenty of ways to win every week.</p>
-			</div>
-		</div>
-	</section>
-
-	<section class="why-choose-section">
-		<div class="container">
-			<h2 class="section-title">Why Choose Saturday Lotto?</h2>
-			<div class="why-choose-grid">
-				<article class="feature-card"> <!-- Use article for self-contained items -->
-					<div class="feature-icon-wrapper">
-						<figure><img src="./AU Site 1_files/image-25.png" alt="Jackpot Icon"></figure>
+			</section>
+			<section class="intro-section intro-alt">
+				<div class="container intro-content-alt">
+					<div class="intro-image">
+						<figure>
+							<img width="1165" height="776" src="images/win-ball.png" alt="People celebrating a win">
+						</figure>
 					</div>
-					<div class="feature-text">
-						<h5>Big Jackpots</h5>
-						<p>Play for life-changing prizes every week</p>
+					<div class="intro-text">
+						<h2>Play Saturday Lotto – Australia’s Favorite Weekend Jackpot!</h2>
+						<p>Dreaming of hitting the big time? Oz Lotto is your chance to win massive jackpots and change your life in an instant! Since 1994, this legendary lottery has been delivering thrilling wins, including an astonishing $100 million jackpot in 2013. With just 7 winning numbers, you could become Australia’s next big winner! Plus, with multiple prize divisions, there are plenty of ways to win every week.</p>
 					</div>
-				</article>
-				<article class="feature-card">
-					<div class="feature-icon-wrapper">
-						<figure><img src="./AU Site 1_files/image-24.png" alt="Platform Icon"></figure>
+				</div>
+			</section>
+			<section class="why-choose-section">
+				<div class="container">
+					<h2 class="section-title">Why Play with Saturday Lotto?</h2>
+					<div class="why-choose-grid">
+						<article class="feature-card">
+							<div class="feature-icon-wrapper">
+								<figure><img src="images/Jackpot-Icon.png" alt="Icon representing big jackpots"></figure>
+							</div>
+							<div class="feature-text">
+								<h5>Life-Changing Jackpots</h5>
+								<p>Get a chance to win massive prizes every Saturday. Your dream jackpot could be just a ticket away!</p>
+							</div>
+						</article>
+						<article class="feature-card">
+							<div class="feature-icon-wrapper">
+								<figure><img src="images/Platform-Icon.png" alt="Easy-to-use platform icon"></figure>
+							</div>
+							<div class="feature-text">
+								<h5>Simple and Intuitive</h5>
+								<p>Enjoy a seamless experience with our easy-to-use platform. Buy tickets and check results in just a few clicks!</p>
+							</div>
+						</article>
+						<article class="feature-card">
+							<div class="feature-icon-wrapper">
+								<figure><img src="images/Security-Icon.png" alt="Security and trust icon"></figure>
+							</div>
+							<div class="feature-text">
+								<h5>Safe and Secure</h5>
+								<p>Your safety is our priority. Play with confidence knowing that all your information is fully protected.</p>
+							</div>
+						</article>
 					</div>
-					<div class="feature-text">
-						<h5>User-Friendly Platform</h5>
-						<p>Easy navigation and quick access to your tickets</p>
+				</div>
+			</section>
+			<section class="lotto-info-section lotto-info-alt">
+				<div class="container lotto-info-grid lotto-info-grid-alt">
+					<div class="lotto-info-card lotto-results lotto-results-alt">
+						<p class="info-title">Latest Winning Numbers</p>
+						<p class="info-date">Draw #1618 — 18 February 2025</p>
+						<div class="lotto-numbers result-numbers result-numbers-alt" aria-label="Latest drawn numbers">
+							<span class="main-number" aria-label="Number 5">05</span>
+							<span class="main-number" aria-label="Number 1">01</span>
+							<span class="main-number" aria-label="Number 49">49</span>
+							<span class="main-number" aria-label="Number 18">18</span>
+							<span class="main-number" aria-label="Number 5">05</span>
+							<span class="supp-number" aria-label="Supplementary Number 1">01</span>
+							<span class="supp-number" aria-label="Supplementary Number 9">9</span>
+						</div>
 					</div>
-				</article>
-				<article class="feature-card">
-					<div class="feature-icon-wrapper">
-						<figure><img src="./AU Site 1_files/image-23.png" alt="Security Icon"></figure>
+					<div class="lotto-info-card hot-numbers hot-numbers-alt">
+						<p class="info-title">Trending Numbers</p>
+						<p class="info-description">These lucky picks show up more often than the rest — will they appear again?</p>
+						<div class="lotto-numbers hot-numbers-display hot-numbers-display-alt" aria-label="Most frequently drawn numbers">
+							<span class="main-number" aria-label="Hot Number 5">05</span>
+							<span class="main-number" aria-label="Hot Number 1">01</span>
+							<span class="main-number" aria-label="Hot Number 49">49</span>
+							<span class="main-number" aria-label="Hot Number 18">18</span>
+							<span class="main-number" aria-label="Hot Number 5">05</span>
+							<span class="supp-number" aria-label="Hot Supplementary 1">01</span>
+							<span class="supp-number" aria-label="Hot Supplementary 9">9</span>
+						</div>
 					</div>
-					<div class="feature-text">
-						<h5>Trusted and Secure</h5>
-						<p>We ensure a transparent and secure gaming</p>
+			
+				</div>
+			</section>
+			<section class="cta-banner-section cta-banner-alt">
+				<div class="container cta-banner-alt-content">
+					<div class="cta-image-col">
+						<figure><img src="images/one-red-ball.png" alt="Red lotto ball illustration"></figure>
 					</div>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<section class="lotto-info-section lotto-info-alt">
-		<div class="container lotto-info-grid lotto-info-grid-alt">
-			<div class="lotto-info-card lotto-results lotto-results-alt">
-				<p class="info-title">Latest Result</p>
-				<p class="info-date">18 February 2025 Draw 1618</p>
-				<div class="lotto-numbers result-numbers result-numbers-alt">
-					<span class="main-number">05</span>
-					<span class="main-number">01</span>
-					<span class="main-number">49</span>
-					<span class="main-number">18</span>
-					<span class="main-number">05</span>
-					<span class="supp-number">01</span>
-					<span class="supp-number">9</span>
+					<div class="cta-text-col">
+						<h4 class="join-title-h4">Be the Next Big Story</h4>
+						<h5 class="join-title-h5">Every draw is a new chance to make history.</h5>
+						<p>Thousands of dreams have already come true through Saturday Lotto. Why not let yours be next? Grab your ticket and get ready for the thrill.</p>
+						<div class="cta-buttons">
+							<a href="register.html" class="button button-cta-light">Get Started</a>
+							<a href="register.html" class="button button-cta-primary">Join Now</a>
+						</div>
+					</div>
+					<div class="cta-jackpot-col">
+						<h2>$37</h2>
+						<p><strong>Million Jackpot</strong></p>
+						<div class="lotto-numbers cta-lotto-numbers" aria-label="Sample winning numbers">
+							<span>05</span>
+							<span>01</span>
+							<span>49</span>
+							<span>18</span>
+						</div>
+					</div>
+			
+				</div>
+			</section>
+			<section class="reviews-section reviews-section-alt">
+				<div class="container">
+					<h3 class="section-title">What Our Players Say</h3>
+					<div class="reviews-grid reviews-grid-alt">
+			
+						<article class="review-card review-card-alt">
+							<div class="review-card-header">
+								<div class="review-icon">
+									<figure><img src="images/customer-01.png" alt="Player Emma R."></figure>
+								</div>
+								<div class="review-rating">
+									<h5>4.9</h5>
+									<figure><img src="images/stars.png" alt="4.9 star rating"></figure>
+								</div>
+							</div>
+							<div class="review-body">
+								<h5>Emma R.</h5>
+								<p>“Saturday Lotto has completely changed how I see the weekend. Simple, fun, and full of surprises!”</p>
+							</div>
+						</article>
+			
+						<article class="review-card review-card-alt">
+							<div class="review-card-header">
+								<div class="review-icon">
+									<figure><img src="images/customer-02.png" alt="Player Michael D."></figure>
+								</div>
+								<div class="review-rating">
+									<h5>4.8</h5>
+									<figure><img src="images/stars.png" alt="4.8 star rating"></figure>
+								</div>
+							</div>
+							<div class="review-body">
+								<h5>Michael D.</h5>
+								<p>“I’ve played for years, and Saturday Lotto is hands-down the most exciting and trustworthy platform out there.”</p>
+							</div>
+						</article>
+			
+						<article class="review-card review-card-alt">
+							<div class="review-card-header">
+								<div class="review-icon">
+									<figure><img src="images/customer-03.png" alt="Player Sofia T."></figure>
+								</div>
+								<div class="review-rating">
+									<h5>4.7</h5>
+									<figure><img src="images/stars.png" alt="4.7 star rating"></figure>
+								</div>
+							</div>
+							<div class="review-body">
+								<h5>Sofia T.</h5>
+								<p>“Fast registration, smooth ticket buying, and great support. I love checking my numbers every Saturday!”</p>
+							</div>
+						</article>
+			
+					</div>
+				</div>
+			</section>
+			<section class="faq-section faq-section-alt">
+				<div class="container">
+					<h2 class="section-title">Frequently Asked Questions</h2>
+					<div class="faq-list faq-list-alt">
+			
+						<details class="faq-item faq-item-alt" open>
+							<summary>How do I buy a ticket online?</summary>
+							<p>To purchase a ticket, simply create an account or log in, choose your favorite numbers, and complete your payment securely. Your ticket is stored in your account and can be viewed anytime.</p>
+						</details>
+			
+						<details class="faq-item faq-item-alt">
+							<summary>When are Saturday Lotto draws held?</summary>
+							<p>Saturday Lotto draws take place every Saturday evening at 8:30 PM AEST. Results are published shortly after, and you'll be notified if you win.</p>
+						</details>
+			
+						<details class="faq-item faq-item-alt">
+							<summary>Can I check past results on your website?</summary>
+							<p>Yes! You can view previous draw results on our Results page. We maintain a history of winning numbers, jackpot amounts, and draw dates so you can stay informed.</p>
+						</details>
+			
+						<details class="faq-item faq-item-alt">
+							<summary>Is my personal information safe?</summary>
+							<p>Absolutely. We use advanced encryption and data protection protocols to ensure your personal and financial details are 100% secure at all times.</p>
+						</details>
+			
+						<details class="faq-item faq-item-alt">
+							<summary>What happens if I win?</summary>
+							<p>If you win a prize, we’ll notify you via email and credit your winnings directly to your account. For major jackpots, our support team will guide you through the secure claim process.</p>
+						</details>
+			
+					</div>
+				</div>
+			</section>
+			<section class="responsible-gaming">
+				<div class="responsible-gaming-background">
+					<img src="images/responsible-bg.png" alt="Abstract background showing responsible gaming theme">
+					<div class="responsible-gaming-overlay"></div>
+				</div>
+				<div class="container responsible-gaming-content">
+					<div class="responsible-gaming-text-box">
+						<h2>Play Smart, Play Safe</h2>
+						<p>
+							At Saturday Lotto, we believe that playing should always be a form of entertainment—not a source of stress. We are committed to promoting responsible gaming by empowering our players with tools and resources to stay in control.
+						</p>
+						<p>
+							Need support? Help is always available. Contact <strong>Gambling Help</strong> at <a href="tel:1800858858">1800 858 858</a> or visit <a href="https://www.gambleaware.nsw.gov.au" target="_blank" rel="noopener">GambleAware</a> for free advice and support.
+						</p>
+						<p>
+							Thinking about taking a break? Visit <a href="https://www.betstop.gov.au" target="_blank" rel="noopener">BetStop.gov.au</a>, Australia’s official national self-exclusion program. This confidential service allows you to opt out from all licensed online gambling platforms across the country.
+						</p>
+						<p>
+							<strong>Compliance & Licensing:</strong> Saturday Lotto is fully licensed and operates under the regulations of the Australian Gambling Commission. Our platform maintains strict compliance with all national guidelines to ensure fair and secure gaming.
+						</p>
+						<p>
+							<strong>Age Policy:</strong> Our services are only available to users aged 18 and over. We actively verify age and implement robust protections to prevent underage access.
+						</p>
+						<p>
+							Saturday Lotto is managed by <strong>The Australian Group Limited</strong>. All rights, trademarks, and visual content are the property of the company and protected by applicable intellectual property laws.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="site-footer site-footer-alt">
+			<div class="container footer-content footer-content-alt">
+				<div class="payment-methods">
+					<ul>
+						<li>
+							<a><img src="images/18plus-icon.png" alt="18+ Only"></a>
+						</li>
+						<li>
+							<a href="https://resetapp.com.au/" target="_blank" rel="noopener">
+								<img src="images/Reset-logo.png" alt="Reset Support App">
+							</a>
+						</li>
+						<li>
+							<a href="https://gamblershelp.com.au/" target="_blank" rel="noopener">
+								<img src="images/Gamblers-Help.png" alt="Gambler's Help">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.qld.gov.au/" target="_blank" rel="noopener">
+								<img src="images/qld-logo.png" alt="Queensland Government">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.vic.gov.au/" target="_blank" rel="noopener">
+								<img src="images/victoria.png" alt="Victoria Government">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="responsible-gaming-footer">
+					<p>
+						<strong>Play Responsibly.</strong> If gambling is affecting your life, seek help. Contact <a href="https://www.gambleaware.nsw.gov.au" target="_blank" rel="noopener">GambleAware</a> or call <a href="tel:1800858858">1800 858 858</a> for confidential support. <strong>Age Restriction:</strong> Participation is strictly limited to individuals aged 18 and over. Underage gambling is against the law and actively prevented on this platform.
+					</p>					
+				</div>
+				<div class="useful-link">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="termsandconditions.html">Terms & Conditions</a></li>
+						<li><a href="privacypolicy.html">Privacy Policy</a></li>
+						<li><a href="cookiepolicy.html">Cookie Policy</a></li>
+						<li><a href="mailto:support@infotrieval.com">Contact</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>©2025 infotrieval.com — All content and rights are exclusively owned and protected.</p>
 				</div>
 			</div>
-			<div class="lotto-info-card hot-numbers hot-numbers-alt">
-				<p class="info-title">Hot Numbers</p>
-				<p class="info-description">These numbers have been drawn most frequently.</p>
-				<div class="lotto-numbers hot-numbers-display hot-numbers-display-alt">
-					<span class="main-number">05</span>
-					<span class="main-number">01</span>
-					<span class="main-number">49</span>
-					<span class="main-number">18</span>
-					<span class="main-number">05</span>
-					<span class="supp-number">01</span>
-					<span class="supp-number">9</span>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="cta-banner-section cta-banner-alt">
-		<div class="container cta-banner-alt-content">
-			<div class="cta-image-col">
-				<figure><img src="./AU Site 1_files/image-26-e1744239433466.png" alt="Lotto balls"></figure>
-			</div>
-			<div class="cta-text-col">
-				<h4><strong>Join the Winner</strong></h4>
-				<h5>Don’t miss out on the chance to change your life.</h5>
-				<p>Hundreds of players have already turned their dreams into reality with Saturday Lotto. Could you be the next lucky winner?</p>
-				<div class="cta-buttons">
-					<a href="#" class="button button-cta-light">play today</a>
-					<a href="#" class="button button-cta-primary">sign up now</a>
-				</div>
-			</div>
-			<div class="cta-jackpot-col">
-				<h2>$37</h2>
-				<p><strong>Million</strong></p>
-				<div class="lotto-numbers cta-lotto-numbers">
-					<span>05</span>
-					<span>01</span>
-					<span>49</span>
-					<span>18</span>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="reviews-section reviews-section-alt">
-		<div class="container">
-			<h3 class="section-title">Players Reviewers</h3>
-			<div class="reviews-grid reviews-grid-alt">
-				<article class="review-card review-card-alt"> <!-- Use article -->
-					<div class="review-card-header">
-						<div class="review-icon">
-							<figure><img src="./AU Site 1_files/image-27.png" alt="Reviewer Avatar"></figure>
-						</div>
-						<div class="review-rating">
-							<h5>4.8</h5>
-							<figure><img src="./AU Site 1_files/image-28.png" alt="Star rating"></figure>
-						</div>
-					</div>
-					<div class="review-body">
-						<h5>A. Campbell</h5>
-						<p>“This game has been amazing! The excitement and winnings are unparalleled.”</p>
-					</div>
-				</article>
-				<article class="review-card review-card-alt">
-					<div class="review-card-header">
-						<div class="review-icon">
-							<figure><img src="./AU Site 1_files/image-27.png" alt="Reviewer Avatar"></figure>
-						</div>
-						<div class="review-rating">
-							<h5>4.8</h5>
-							<figure><img src="./AU Site 1_files/image-28.png" alt="Star rating"></figure>
-						</div>
-					</div>
-					<div class="review-body">
-						<h5>A. Campbell</h5>
-						<p>“This game has been amazing! The excitement and winnings are unparalleled.”</p>
-					</div>
-				</article>
-				<article class="review-card review-card-alt">
-					<div class="review-card-header">
-						<div class="review-icon">
-							<figure><img src="./AU Site 1_files/image-27.png" alt="Reviewer Avatar"></figure>
-						</div>
-						<div class="review-rating">
-							<h5>4.8</h5>
-							<figure><img src="./AU Site 1_files/image-28.png" alt="Star rating"></figure>
-						</div>
-					</div>
-					<div class="review-body">
-						<h5>A. Campbell</h5>
-						<p>“This game has been amazing! The excitement and winnings are unparalleled.”</p>
-					</div>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<section class="faq-section faq-section-alt">
-		<div class="container">
-			<h2 class="section-title">FAQ</h2>
-			<div class="faq-list faq-list-alt">
-				<details class="faq-item faq-item-alt" open>
-					<summary>Play Australia’s Premier Online Lottery</summary>
-					<p>Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,</p>
-				</details>
-				<details class="faq-item faq-item-alt">
-					<summary>How do I register?</summary>
-					<p>Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,</p>
-				</details>
-				<details class="faq-item faq-item-alt">
-					<summary>Is playing online secure?</summary>
-					<p>Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,Established in the heart of Australia.Buy your watch is premium service committed to offering the most competitive rates for your luxury watches. We specialize in acuquiring timepieces from renowed brands like Rolex,</p>
-				</details>
-			</div>
-		</div>
-	</section>
-
-	<section class="responsible-gaming">
-		<div class="responsible-gaming-background">
-			<img src="./AU Site 1_files/image-29.png" alt="Abstract background">
-			<div class="responsible-gaming-overlay"></div>
-		</div>
-		<div class="container responsible-gaming-content">
-			<div class="responsible-gaming-text-box">
-				<h2>Responsible Gaming</h2>
-				<p>Make Informed Decisions. Your well-being is our priority. If you require assistance or guidance regarding gambling, please contact Gambling Help at 1800 858 858 or visit GambleAware online at gambleaware.nsw.gov.au. About BetStop. BetStop is Australia’s official National Self-Exclusion Register, offering a free and confidential service for those who wish to exclude themselves from all licensed online gambling providers. For more details and to access this service, visit betstop.gov.au.Licensed and Regulated. Saturday Lotto operates under a license issued by the Australian Government Department and adheres to the laws and regulations set by the Australian Gambling Commission. We are dedicated to upholding the highest standards of integrity and responsible gambling practices. Ownership and Copyright. Saturday Lotto is proudly managed by The Australian Group Limited. The Saturday Lotto logo is a registered trademark of The Australian Group Limited, with all intellectual property rights reserved. Age Restrictions. Participation in gambling activities is strictly limited to individuals aged 18 and above. We take active measures to prevent underage gambling in accordance with Australian law.</p>
-			</div>
-		</div>
-	</section>
-
-</main>
-
-<footer class="site-footer site-footer-alt">
-	<div class="container footer-content footer-content-alt">
-		<div class="payment-methods">
-			<figure><img height="50" src="./AU Site 1_files/image-12.png" alt="Payment Method 1"></figure>
-			<figure><img height="50" src="./AU Site 1_files/image-16.png" alt="Payment Method 2"></figure>
-			<figure><img height="50" src="./AU Site 1_files/image-14.png" alt="Payment Method 3"></figure>
-			<figure><img height="50" src="./AU Site 1_files/image-17.png" alt="Payment Method 4"></figure>
-			<figure><img height="50" src="./AU Site 1_files/image-18.png" alt="Payment Method 5"></figure>
-		</div>
-		<div class="responsible-gaming-footer">
-			<p>Think! About your choices. Gamble Responsibly. Call Gambling Help on 1800 858 858.<br>GambleAware We are committed to Responsible Gambling. Persons under 18 years of age are not permitted to gamble.</p>
-			<p>Copyright ©2025 | All directions are reserved.</p>
-		</div>
-	</div>
-</footer>
-
-</body>
+		</footer>
+		<script>
+			function getOrCreateTargetDate() {
+			  const stored = localStorage.getItem("countdownTarget");
+		
+			  if (stored) {
+				const parsed = Date.parse(stored);
+				if (!isNaN(parsed)) {
+				  return new Date(parsed);
+				}
+			  }
+		
+			  const now = new Date();
+			  const future = new Date(now.getTime() + 5 * 24 * 60 * 60 * 1000); // 5 days ahead
+			  localStorage.setItem("countdownTarget", future.toISOString());
+			  return future;
+			}
+		
+			function updateTimer(targetDate) {
+			  const now = new Date().getTime();
+			  const distance = targetDate.getTime() - now;
+		
+			  if (distance <= 0) {
+				document.getElementById("days").textContent = "00";
+				document.getElementById("hours").textContent = "00";
+				document.getElementById("minutes").textContent = "00";
+				document.getElementById("seconds").textContent = "00";
+				clearInterval(timerInterval);
+				return;
+			  }
+		
+			  const days = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+			  const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+			  const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+			  const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+		
+			  document.getElementById("days").textContent = days;
+			  document.getElementById("hours").textContent = hours;
+			  document.getElementById("minutes").textContent = minutes;
+			  document.getElementById("seconds").textContent = seconds;
+			}
+		
+			const targetDate = getOrCreateTargetDate();
+			const timerInterval = setInterval(() => updateTimer(targetDate), 1000);
+			updateTimer(targetDate);
+		</script>
+	</body>
 </html>

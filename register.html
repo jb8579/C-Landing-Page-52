@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register for Saturday Lotto Australia - Join and Play Today</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <meta name="description" content="Sign up to play Saturday Lotto, get the latest results, tips, and exclusive offers. Start your lotto journey with infotrieval.com.">
+        <meta name="keywords" content="register Saturday Lotto, sign up Australia, lottery registration, lotto play, join Saturday Lotto, lotto account, play lotto Australia">
+        <meta name="author" content="infotrieval.com">
+        <meta property="og:title" content="Register for Saturday Lotto Australia - Start Your Lotto Adventure">
+        <meta property="og:description" content="Sign up for Saturday Lotto, access the latest results, expert tips, and start playing today. Only on infotrieval.com.">
+        <meta property="og:url" content="https://infotrieval.com/register">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://infotrieval.com/images/saturday-background-ball-image.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Register for Saturday Lotto Australia - Start Your Lotto Adventure">
+        <meta name="twitter:description" content="Join Saturday Lotto, check results, and get tips for playing smart. Register now on infotrieval.com.">
+        <meta name="twitter:image" content="https://infotrieval.com/images/saturday-background-ball-image.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>    
+	<body>
+		<header class="site-header">
+			<div class="age-restriction-top-bar">
+				<p><img src="images/18+ icon  1.png" alt="18+ Icon">Only for users aged 18 and over. Play responsibly — Know your limits.</p>
+			</div>
+			<div class="container header-content">
+				<div class="logo">
+					<a href="index.html" rel="home">
+						<img width="93" height="60" src="images/saturday-lotto-logo.png" alt="Saturday Lotto - Australia’s Favourite Draw">
+					</a>
+				</div>
+				<nav class="auth-buttons">
+					<a href="login.html" class="button button-login">Sign In</a>
+					<a href="register.html" class="button button-register">Join Now</a>
+				</nav>
+			</div>
+		</header>	
+        <main>
+           <section class="form-bg">
+                <div class="form-container">
+                    <h2 class="form-title">CREATE YOUR ACCOUNT</h2>
+                    <input type="email" id="email" placeholder="Your email address" required>
+                    <input type="text" id="firstName" placeholder="Enter your first name" required>
+                    <input type="text" id="lastName" placeholder="Enter your last name" required>
+                    <div class="password-flex">
+                        <input type="password" id="password" placeholder="Create your password" required>
+                        <img src="images/visibility_off.png" alt="Hide Password">
+                    </div>
+                    <small>Password must be at least 8 characters, include one uppercase letter and one number</small>
+                    <div class="checkbox">
+                        <input type="checkbox" id="terms"> 
+                        <label for="terms">I declare that I am 18+ and I agree to the Terms and Privacy Policy of Saturday Lotto. Sign me up!</label>
+                    </div>
+                    <button id="registerBtn" disabled>Complete Registration</button>
+                    <p class="login-link">Already have an account? <a href="login.html">Sign in here</a></p>
+                </div>
+            
+                <script>
+                    const registerBtn = document.getElementById("registerBtn");
+                    const termsCheckbox = document.getElementById("terms");
+                    const passwordField = document.getElementById("password");
+            
+                    termsCheckbox.addEventListener("change", () => {
+                        registerBtn.disabled = !termsCheckbox.checked;
+                    });
+            
+                    registerBtn.addEventListener("click", () => {
+                        const email = document.getElementById("email").value;
+                        const firstName = document.getElementById("firstName").value;
+                        const lastName = document.getElementById("lastName").value;
+                        const password = passwordField.value;
+            
+                        if (!email || !firstName || !lastName || !password) {
+                            alert("All fields are required!");
+                            return;
+                        }
+            
+                        const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+                        if (!passwordRegex.test(password)) {
+                            alert("Password must be at least 8 characters long, contain 1 uppercase letter and 1 number.");
+                            return;
+                        }
+            
+                        alert("Registration Successful!");
+                        window.location.href = "index.html";
+                    });
+                </script>
+           </section>     
+        </main>
+        <footer class="site-footer site-footer-alt">
+			<div class="container footer-content footer-content-alt">
+				<div class="payment-methods">
+					<ul>
+						<li>
+							<a><img src="images/18plus-icon.png" alt="18+ Only"></a>
+						</li>
+						<li>
+							<a href="https://resetapp.com.au/" target="_blank" rel="noopener">
+								<img src="images/Reset-logo.png" alt="Reset Support App">
+							</a>
+						</li>
+						<li>
+							<a href="https://gamblershelp.com.au/" target="_blank" rel="noopener">
+								<img src="images/Gamblers-Help.png" alt="Gambler's Help">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.qld.gov.au/" target="_blank" rel="noopener">
+								<img src="images/qld-logo.png" alt="Queensland Government">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.vic.gov.au/" target="_blank" rel="noopener">
+								<img src="images/victoria.png" alt="Victoria Government">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="responsible-gaming-footer">
+					<p>
+						<strong>Play Responsibly.</strong> If gambling is affecting your life, seek help. Contact <a href="https://www.gambleaware.nsw.gov.au" target="_blank" rel="noopener">GambleAware</a> or call <a href="tel:1800858858">1800 858 858</a> for confidential support. <strong>Age Restriction:</strong> Participation is strictly limited to individuals aged 18 and over. Underage gambling is against the law and actively prevented on this platform.
+					</p>					
+				</div>
+				<div class="useful-link">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="termsandconditions.html">Terms & Conditions</a></li>
+						<li><a href="privacypolicy.html">Privacy Policy</a></li>
+						<li><a href="cookiepolicy.html">Cookie Policy</a></li>
+						<li><a href="mailto:support@infotrieval.com">Contact</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>©2025 infotrieval.com — All content and rights are exclusively owned and protected.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
